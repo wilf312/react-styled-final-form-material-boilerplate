@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const src = path.resolve(__dirname, '../src')
-const dist = path.resolve(__dirname, '../dist')
+const dist = path.resolve(__dirname, '../docs')
 const port = 3000
 
 module.exports = {
