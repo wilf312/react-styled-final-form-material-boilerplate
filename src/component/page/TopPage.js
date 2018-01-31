@@ -12,13 +12,19 @@ class TopPage extends React.Component {
       <Form
         onSubmit={() => {}}
         initialValues={{
-          slider: ''
+          Slider: 13,
+          Text: 'Text',
+          Color: '#00ff00',
+          LuckyNumber: '2',
+          PotateChips: [
+            'consomme'
+          ]
         }}
         validate={required}
         render={({ values }) => (
           <Wrap>
             <h2>Slider</h2>
-            <Field name='Slider' component={Slider} />
+            <Field name='Slider' component={Slider} initialValue={values.Slider} />
 
             <h2>Text</h2>
             <Field name='Text' type='text' component='input'  />
