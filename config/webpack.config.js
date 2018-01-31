@@ -28,6 +28,7 @@ module.exports = {
     extensions: ['.js'],
     alias: {
       src: src,
+      adapt: src + '/component/adapt',
       page: src + '/component/page',
       atom: src + '/component/atom',
       molecule: src + '/component/molecule',
