@@ -1,9 +1,9 @@
 import React from 'react'
+import TextField from 'atom/TextField/adapt'
 import Slider from 'adapt/Slider'
 import { Form, Field } from 'react-final-form'
 import Styled from 'styled-components'
-
-const required = value => (value ? undefined : 'Required')
+import {composeValidators, required, basicLatin} from '../util/validation'
 
 class TopPage extends React.Component {
   render () {
@@ -13,6 +13,7 @@ class TopPage extends React.Component {
         onSubmit={() => {}}
         initialValues={{
           Slider: 13,
+          TextField: '',
           Text: 'Text',
           Color: '#00ff00',
           LuckyNumber: '2',
@@ -27,6 +28,18 @@ class TopPage extends React.Component {
               <h2>third party</h2>
               <h3>Slider</h3>
               <Field name='Slider' component={Slider} initialValue={values.Slider} />
+
+              <h3>Text</h3>
+              <Field
+                name='TextField'
+                component={TextField}
+                validate={composeValidators(required, basicLatin)}
+                defaultValue={values.TextField}
+                hintText={'john titor'}
+                disabled={false}
+                floatingLabelText={'名前'}
+                floatingLabelFixed
+              />
             </StyledSection>
 
             <StyledSection>
