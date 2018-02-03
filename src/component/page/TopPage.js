@@ -23,30 +23,37 @@ class TopPage extends React.Component {
         validate={required}
         render={({ values }) => (
           <Wrap>
-            <h2>Slider</h2>
-            <Field name='Slider' component={Slider} initialValue={values.Slider} />
+            <StyledSection>
+              <h2>third party</h2>
+              <h3>Slider</h3>
+              <Field name='Slider' component={Slider} initialValue={values.Slider} />
+            </StyledSection>
 
-            <h2>Text</h2>
-            <Field name='Text' type='text' component='input' />
+            <StyledSection>
+              <h2>default input type</h2>
+              <h3>Text</h3>
+              <Field name='Text' type='text' component='input' />
 
-            <h2>Color</h2>
-            <Field name='Color' component='select'>
-              <option />
-              <option value='#ff0000'>❤️ Red</option>
-              <option value='#00ff00'>💚 Green</option>
-              <option value='#0000ff'>💙 Blue</option>
-            </Field>
+              <h3>Color</h3>
+              <Field name='Color' component='select'>
+                <option />
+                <option value='#ff0000'>❤️ Red</option>
+                <option value='#00ff00'>💚 Green</option>
+                <option value='#0000ff'>💙 Blue</option>
+              </Field>
 
-            <h2>LuckyNumber</h2>
-            <label><Field name='LuckyNumber' component='input' type='radio' value='1' />1</label>
-            <label><Field name='LuckyNumber' component='input' type='radio' value='2' />2</label>
-            <label><Field name='LuckyNumber' component='input' type='radio' value='3' />3</label>
+              <h3>LuckyNumber</h3>
+              <label><Field name='LuckyNumber' component='input' type='radio' value='1' />1</label>
+              <label><Field name='LuckyNumber' component='input' type='radio' value='2' />2</label>
+              <label><Field name='LuckyNumber' component='input' type='radio' value='3' />3</label>
 
 
 
-            <h2>PotateChips</h2>
-            <label><Field name='PotateChips' component='input' type='checkbox' value='salt' />salt</label>
-            <label><Field name='PotateChips' component='input' type='checkbox' value='consomme' />consomme</label>
+              <h3>PotateChips</h3>
+              <label><Field name='PotateChips' component='input' type='checkbox' value='salt' />salt</label>
+              <label><Field name='PotateChips' component='input' type='checkbox' value='consomme' />consomme</label>
+
+            </StyledSection>
 
             <StyledPre>{JSON.stringify(values, 0, 2)}</StyledPre>
 
@@ -67,4 +74,10 @@ const Wrap = Styled.div`
 const StyledPre = Styled.pre`
   background-color: #e8e2e2;
   padding: 10px 15px;
+`
+
+const StyledSection = Styled.section`
+  padding: 10px;
+  margin-bottom: 30px;
+  border: solid 1px #f0f0f0;
 `
