@@ -15,7 +15,7 @@ class TopPage extends React.Component {
         initialValues={{
           Slider: 13,
           TextField: '',
-          Checkbox: 'a',
+          Checkbox: ['UI design'],
           Text: 'Text',
           Color: '#00ff00',
           LuckyNumber: '2',
@@ -48,22 +48,26 @@ class TopPage extends React.Component {
 
               <h3>Checkbox</h3>
 
-              <Field
-                name='Ice'
-                component={Checkbox}
-                dataList={[{
-                  label: 'a',
-                  disabled: false
-                }, {
-                  label: 'b',
-                  disabled: false
-                }, {
-                  label: 'c',
-                  disabled: true
-                }]}
-                disabled={false}
-                labelText={'Ice'}
-              />
+              {[{
+                label: 'Frontend developer',
+                disabled: false
+              }, {
+                label: 'Backend developer',
+                disabled: false
+              }, {
+                label: 'UI design',
+                disabled: true
+              }].map(({label, disabled}) => {
+                return <Field
+                  name='Checkbox'
+                  type='checkbox'
+                  labelText={label}
+                  value={label}
+                  key={label}
+                  component={Checkbox}
+                  disabled={disabled}
+                />
+              })}
             </StyledSection>
 
             <StyledSection>

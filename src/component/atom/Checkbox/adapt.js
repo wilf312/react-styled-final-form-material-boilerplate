@@ -4,16 +4,15 @@ import Checkbox from './Checkbox'
 export default ({
     input,
     meta,
-    defaultValue,
-    hintText,
-    errorText,
-    disabled,
-    dataList,
-    floatingLabelText,
-    floatingLabelFixed
+    labelText,
+    disabled
   }) => (<Checkbox
-    dataList={dataList}
+    labelText={labelText}
+    component={Checkbox}
     disabled={disabled}
-    value={input.value}
+    checked={input.checked}
+    onCheck={(e) => {
+      input.onChange(e)
+    }}
   />
 )
