@@ -15,6 +15,7 @@ class TopPage extends React.Component {
         initialValues={{
           Slider: 13,
           TextField: '',
+          Checkbox: 'a',
           Text: 'Text',
           Color: '#00ff00',
           LuckyNumber: '2',
@@ -46,13 +47,22 @@ class TopPage extends React.Component {
               />
 
               <h3>Checkbox</h3>
+
               <Field
                 name='Ice'
                 component={Checkbox}
-                defaultValue={values.Checkbox}
+                dataList={[{
+                  label: 'a',
+                  disabled: false
+                }, {
+                  label: 'b',
+                  disabled: false
+                }, {
+                  label: 'c',
+                  disabled: true
+                }]}
                 disabled={false}
                 labelText={'Ice'}
-                dataList={['Chocolate', 'vanilla']}
               />
             </StyledSection>
 

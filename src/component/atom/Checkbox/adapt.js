@@ -12,16 +12,8 @@ export default ({
     floatingLabelText,
     floatingLabelFixed
   }) => (<Checkbox
-    onChange={(e, val) => {
-      input.onChange(val)
-    }}
-    onBlur={() => {
-      input.onBlur()
-    }}
-    defaultValue={defaultValue}
-    hintText={hintText}
-    errorText={meta.touched ? meta.error : ''}
+    dataList={dataList}
     disabled={disabled}
-    labelText={dataList[0]}
+    value={input.value}
   />
 )

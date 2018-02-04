@@ -4,20 +4,23 @@ import CheckboxUI from 'material-ui/Checkbox'
 class Checkbox extends React.Component {
   render () {
     const {
-      checked,
+      dataList,
+      value,
       disabled,
-      labelText,
-      onBlur,
-      onChange
+      onCheck
     } = this.props
-    return <CheckboxUI
-      label={labelText}
-      disabled={disabled}
-      checked={checked}
-      onCheck={onChange.bind(this)}
-    />
-
-
+    return <div>
+      {dataList && dataList.map((d) => {
+        const {label} = d
+        return <CheckboxUI
+          label={label}
+          key={label}
+          disabled={disabled || d.disabled}
+          checked={label === value}
+          onCheck={onCheck}
+        />
+      })}
+    </div>
   }
 }
 
