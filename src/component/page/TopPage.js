@@ -92,6 +92,15 @@ class TopPage extends React.Component {
                   disabled={disabled}
                 />
               })}
+
+              <h3>Toggle</h3>
+              <Field
+                name='Toggle'
+                label={'名前'}
+                disabled={false}
+                defaultValue={values.Toggle}
+                component={Toggle}
+              />
             </StyledSection>
 
             <DefaultInput />
