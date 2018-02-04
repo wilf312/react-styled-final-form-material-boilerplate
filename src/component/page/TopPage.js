@@ -1,6 +1,7 @@
 import React from 'react'
 import TextField from 'atom/TextField/adapt'
 import Slider from 'adapt/Slider'
+import Checkbox from 'atom/Checkbox/adapt'
 import { Form, Field } from 'react-final-form'
 import Styled from 'styled-components'
 import {composeValidators, required, basicLatin} from '../util/validation'
@@ -19,6 +20,9 @@ class TopPage extends React.Component {
           LuckyNumber: '2',
           PotateChips: [
             'consomme'
+          ],
+          Ice: [
+            'Chocolate'
           ]
         }}
         validate={required}
@@ -39,6 +43,16 @@ class TopPage extends React.Component {
                 disabled={false}
                 floatingLabelText={'名前'}
                 floatingLabelFixed
+              />
+
+              <h3>Checkbox</h3>
+              <Field
+                name='Ice'
+                component={Checkbox}
+                defaultValue={values.Checkbox}
+                disabled={false}
+                labelText={'Ice'}
+                dataList={['Chocolate', 'vanilla']}
               />
             </StyledSection>
 
