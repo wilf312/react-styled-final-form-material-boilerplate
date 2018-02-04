@@ -1,9 +1,12 @@
 import React from 'react'
 import TextField from 'atom/TextField/adapt'
+import Toggle from 'atom/Toggle/adapt'
 import Slider from 'adapt/Slider'
 import { Form, Field } from 'react-final-form'
 import Styled from 'styled-components'
 import {composeValidators, required, basicLatin} from '../util/validation'
+
+import DefaultInput from 'organism/DefaultInput'
 
 class TopPage extends React.Component {
   render () {
@@ -11,16 +14,18 @@ class TopPage extends React.Component {
       <p> Hello React & final-form & material-ui & Styled-components!</p>
       <Form
         onSubmit={() => {}}
-        initialValues={{
+        initialValues={Object.assign({}, {
           Slider: 13,
           TextField: '',
+          Toggle: true
+        }, {
           Text: 'Text',
           Color: '#00ff00',
           LuckyNumber: '2',
           PotateChips: [
             'consomme'
           ]
-        }}
+        })}
         validate={required}
         render={({ values }) => (
           <Wrap>
@@ -40,33 +45,18 @@ class TopPage extends React.Component {
                 floatingLabelText={'名前'}
                 floatingLabelFixed
               />
+
+              <h3>Toggle</h3>
+              <Field
+                name='Toggle'
+                label={'名前'}
+                disabled={false}
+                defaultValue={values.Toggle}
+                component={Toggle}
+              />
             </StyledSection>
 
-            <StyledSection>
-              <h2>default input type</h2>
-              <h3>Text</h3>
-              <Field name='Text' type='text' component='input' />
-
-              <h3>Color</h3>
-              <Field name='Color' component='select'>
-                <option />
-                <option value='#ff0000'>❤️ Red</option>
-                <option value='#00ff00'>💚 Green</option>
-                <option value='#0000ff'>💙 Blue</option>
-              </Field>
-
-              <h3>LuckyNumber</h3>
-              <label><Field name='LuckyNumber' component='input' type='radio' value='1' />1</label>
-              <label><Field name='LuckyNumber' component='input' type='radio' value='2' />2</label>
-              <label><Field name='LuckyNumber' component='input' type='radio' value='3' />3</label>
-
-
-
-              <h3>PotateChips</h3>
-              <label><Field name='PotateChips' component='input' type='checkbox' value='salt' />salt</label>
-              <label><Field name='PotateChips' component='input' type='checkbox' value='consomme' />consomme</label>
-
-            </StyledSection>
+            <DefaultInput />
 
             <StyledPre>{JSON.stringify(values, 0, 2)}</StyledPre>
 
