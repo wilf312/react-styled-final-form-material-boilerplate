@@ -1,5 +1,6 @@
 import React from 'react'
 import TextField from 'atom/TextField/adapt'
+import Toggle from 'atom/Toggle/adapt'
 import Slider from 'adapt/Slider'
 import { Form, Field } from 'react-final-form'
 import Styled from 'styled-components'
@@ -14,6 +15,7 @@ class TopPage extends React.Component {
         initialValues={{
           Slider: 13,
           TextField: '',
+          Toggle: true,
           Text: 'Text',
           Color: '#00ff00',
           LuckyNumber: '2',
@@ -39,6 +41,15 @@ class TopPage extends React.Component {
                 disabled={false}
                 floatingLabelText={'名前'}
                 floatingLabelFixed
+              />
+
+              <h3>Toggle</h3>
+              <Field
+                name='Toggle'
+                component={Toggle}
+                defaultValue={values.Toggle}
+                disabled={false}
+                label={'名前'}
               />
             </StyledSection>
 
