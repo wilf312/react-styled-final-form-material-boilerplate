@@ -1307,8 +1307,8 @@ css-select@^1.1.0:
     nth-check "~1.0.1"
 
 css-to-react-native@^2.0.3:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/css-to-react-native/-/css-to-react-native-2.0.4.tgz#cf4cc407558b3474d4ba8be1a2cd3b6ce713101b"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/css-to-react-native/-/css-to-react-native-2.1.0.tgz#671b922aa3c0bc880e09f8f00e5a4bf0803928e5"
   dependencies:
     css-color-keywords "^1.0.0"
     fbjs "^0.8.5"
@@ -4679,8 +4679,8 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 styled-components@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.1.4.tgz#1bdc1409c9bacafee3510c573d23b73039b0d875"
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.1.6.tgz#9c443146fa82c6659a9f64dd493bf2202480342e"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
