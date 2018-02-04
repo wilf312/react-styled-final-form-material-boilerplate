@@ -1,12 +1,21 @@
 import React from 'react'
 import TextField from 'atom/TextField/adapt'
 import Toggle from 'atom/Toggle/adapt'
+import SelectField from 'atom/SelectField/adapt'
 import Slider from 'adapt/Slider'
 import { Form, Field } from 'react-final-form'
 import Styled from 'styled-components'
-import {composeValidators, required, basicLatin} from '../util/validation'
+import {composeValidators, required, basicLatin, checkIceCream} from '../util/validation'
 
 import DefaultInput from 'organism/DefaultInput'
+
+const dataSet = {
+  SelectField: [
+    {label: 'Chocolate', value: 1},
+    {label: 'Vanilla', value: 2},
+    {label: 'Cosmic taste ', value: -1}
+  ]
+}
 
 class TopPage extends React.Component {
   render () {
@@ -17,6 +26,7 @@ class TopPage extends React.Component {
         initialValues={Object.assign({}, {
           Slider: 13,
           TextField: '',
+          SelectField: '',
           Toggle: true
         }, {
           Text: 'Text',
@@ -31,6 +41,15 @@ class TopPage extends React.Component {
           <Wrap>
             <StyledSection>
               <h2>third party</h2>
+              <h3>SelectField</h3>
+              <Field
+                name='SelectField'
+                component={SelectField}
+                value={values.SelectField}
+                dataList={dataSet.SelectField}
+                validate={composeValidators(checkIceCream)}
+              />
+
               <h3>Slider</h3>
               <Field name='Slider' component={Slider} initialValue={values.Slider} />
 
