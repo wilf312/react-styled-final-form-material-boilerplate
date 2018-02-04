@@ -4,17 +4,13 @@ import ToggleUI from 'material-ui/Toggle'
 class Toggle extends React.Component {
   render () {
     const {
-      defaultValue,
-      hintText,
-      disabled,
-      onBlur,
-      onChange
+      input: { onChange, value },
+      label
     } = this.props
     return <ToggleUI
-      defaultToggled={defaultValue}
-      hintText={hintText}
-      disabled={disabled}
-      
+      label={label}
+      toggled={!!value}
+      onToggle={(event, isInputChecked) => onChange(isInputChecked)}
     />
   }
 }
