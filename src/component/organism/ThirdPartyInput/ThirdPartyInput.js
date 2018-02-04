@@ -68,7 +68,7 @@ export default () => (
     <h3>Toggle</h3>
     <Field
       name='Toggle'
-      label={'名前'}
+      label={'Switch'}
       disabled={false}
       component={Toggle}
     />
