@@ -13,6 +13,7 @@
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.dev.js",
     "build": "webpack --config ./config/webpack.build.js",
+    "upgrade": "yarn upgrade-interactive --latest",
     "lint": "standard src/*.js",
     "fix": "standard --fix src/*.js"
   },
