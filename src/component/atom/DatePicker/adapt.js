@@ -1,14 +1,14 @@
 import React from 'react'
-import Checkbox from './Checkbox'
+import DatePicker from './DatePicker'
 
 export default ({
     input,
     meta,
     labelText,
     disabled
-  }) => (<Checkbox
+  }) => (<DatePicker
     labelText={labelText}
-    component={Checkbox}
+    component={DatePicker}
     disabled={disabled}
     checked={input.checked}
     onCheck={(e) => {

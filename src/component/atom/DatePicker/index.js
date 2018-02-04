@@ -1,3 +1,3 @@
-import Checkbox from './Checkbox'
+import DatePicker from './DatePicker'
 
-export default Checkbox
+export default DatePicker

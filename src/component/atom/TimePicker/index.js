@@ -1,3 +1,3 @@
-import Checkbox from './Checkbox'
+import TimePicker from './TimePicker'
 
-export default Checkbox
+export default TimePicker

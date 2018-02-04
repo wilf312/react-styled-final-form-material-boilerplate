@@ -1,7 +1,7 @@
 import React from 'react'
-import CheckboxUI from 'material-ui/Checkbox'
+import DatePickerUI from 'material-ui/DatePicker'
 
-class Checkbox extends React.Component {
+class DatePicker extends React.Component {
   render () {
     const {
       labelText,
@@ -9,7 +9,7 @@ class Checkbox extends React.Component {
       checked,
       onCheck
     } = this.props
-    return <CheckboxUI
+    return <DatePickerUI
       label={labelText}
       key={labelText}
       disabled={disabled}
@@ -19,4 +19,4 @@ class Checkbox extends React.Component {
   }
 }
 
-export default Checkbox
+export default DatePicker
