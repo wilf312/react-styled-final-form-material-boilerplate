@@ -1,19 +1,11 @@
 import React from 'react'
-import { Form, Field } from 'react-final-form'
+import { Form } from 'react-final-form'
 import Styled from 'styled-components'
 
 import DefaultInput from 'organism/DefaultInput'
 import ThirdPartyInput from 'organism/ThirdPartyInput'
 
 import {required} from 'src/component/util/validation'
-
-const dataSet = {
-  SelectField: [
-    {label: 'Chocolate', value: 1},
-    {label: 'Vanilla', value: 2},
-    {label: 'Cosmic taste ', value: -1}
-  ]
-}
 
 class TopPage extends React.Component {
   render () {

@@ -17,7 +17,7 @@ export default ({
     onBlur={() => {
       input.onBlur()
     }}
-    defaultValue={defaultValue}
+    defaultValue={input.value}
     hintText={hintText}
     errorText={meta.touched ? meta.error : ''}
     disabled={disabled}

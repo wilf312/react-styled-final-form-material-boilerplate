@@ -9,6 +9,14 @@ import SelectField from 'atom/SelectField/adapt'
 import Slider from 'adapt/Slider'
 import Checkbox from 'atom/Checkbox/adapt'
 
+const dataSet = {
+  SelectField: [
+    {label: 'Chocolate', value: 1},
+    {label: 'Vanilla', value: 2},
+    {label: 'Cosmic taste ', value: -1}
+  ]
+}
+
 export default () => (
   <StyledSection>
     <h2>third party</h2>
@@ -16,20 +24,18 @@ export default () => (
     <Field
       name='SelectField'
       component={SelectField}
-      value={values.SelectField}
       dataList={dataSet.SelectField}
       validate={composeValidators(checkIceCream)}
     />
 
     <h3>Slider</h3>
-    <Field name='Slider' component={Slider} initialValue={values.Slider} />
+    <Field name='Slider' component={Slider} />
 
     <h3>Text</h3>
     <Field
       name='TextField'
       component={TextField}
       validate={composeValidators(required, basicLatin)}
-      defaultValue={values.TextField}
       hintText={'john titor'}
       disabled={false}
       floatingLabelText={'名前'}
@@ -64,7 +70,6 @@ export default () => (
       name='Toggle'
       label={'名前'}
       disabled={false}
-      defaultValue={values.Toggle}
       component={Toggle}
     />
   </StyledSection>
