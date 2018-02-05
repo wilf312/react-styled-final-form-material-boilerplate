@@ -4,7 +4,7 @@ import { Field } from 'react-final-form'
 
 export default () => (
   <StyledSection>
-    <h2>default input type</h2>
+    <Title>default input type</Title>
     <h3>Text</h3>
     <Field name='Text' type='text' component='input' />
 
@@ -31,7 +31,13 @@ export default () => (
 )
 
 const StyledSection = Styled.section`
+  width: 100%;
   padding: 10px;
   margin-bottom: 30px;
   border: solid 1px #f0f0f0;
+`
+
+const Title = Styled.h2`
+  border-bottom: solid 3px;
+  padding-bottom: 3px;
 `

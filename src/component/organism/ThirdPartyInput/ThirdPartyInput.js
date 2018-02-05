@@ -21,7 +21,7 @@ const dataSet = {
 
 export default () => (
   <StyledSection>
-    <h2>third party</h2>
+    <Title>third party</Title>
 
     <h3>TimePicker</h3>
     <Field
@@ -98,7 +98,13 @@ export default () => (
 )
 
 const StyledSection = Styled.section`
+  width: 100%;
   padding: 10px;
   margin-bottom: 30px;
   border: solid 1px #f0f0f0;
+`
+
+const Title = Styled.h2`
+  border-bottom: solid 3px;
+  padding-bottom: 3px;
 `
