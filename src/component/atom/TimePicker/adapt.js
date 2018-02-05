@@ -5,14 +5,14 @@ export default ({
     input,
     meta,
     labelText,
+    autoOk,
     disabled
   }) => (<TimePicker
     labelText={labelText}
-    component={TimePicker}
+    autoOk={autoOk}
     disabled={disabled}
-    checked={input.checked}
-    onCheck={(e) => {
-      input.onChange(e)
+    onChange={(e, date) => {
+      input.onChange(date)
     }}
   />
 )

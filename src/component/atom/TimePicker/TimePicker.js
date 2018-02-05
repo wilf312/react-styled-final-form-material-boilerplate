@@ -4,11 +4,20 @@ import TimePickerUI from 'material-ui/TimePicker'
 class TimePicker extends React.Component {
   render () {
     const {
+      value,
+      onChange,
+      disabled,
+      autoOk,
+      format,
+      hintText
     } = this.props
-    return <TimePicker
-      disabled={false}
-      format='24hr'
-      hintText='Disabled TimePicker'
+    return <TimePickerUI
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+      autoOk={autoOk}
+      format={format}
+      hintText={hintText}
     />
   }
 }

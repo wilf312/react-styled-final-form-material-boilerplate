@@ -4,18 +4,21 @@ import DatePickerUI from 'material-ui/DatePicker'
 class DatePicker extends React.Component {
   render () {
     const {
-      labelText,
+      value,
+      hintText,
+      autoOk,
       disabled,
-      checked,
-      onCheck
+      onChange,
+      openToYearSelection
     } = this.props
-    return <DatePickerUI
-      label={labelText}
-      key={labelText}
+    return (<DatePickerUI
+      value={value}
+      hintText={hintText}
+      autoOk={autoOk}
       disabled={disabled}
-      checked={checked}
-      onCheck={onCheck}
-    />
+      onChange={onChange}
+      openToYearSelection={openToYearSelection}
+    />)
   }
 }
 

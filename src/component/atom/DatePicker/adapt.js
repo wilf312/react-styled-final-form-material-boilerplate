@@ -5,14 +5,17 @@ export default ({
     input,
     meta,
     labelText,
-    disabled
+    disabled,
+    autoOk,
+    openToYearSelection
   }) => (<DatePicker
-    labelText={labelText}
-    component={DatePicker}
+    value={input.value}
+    hintText={labelText}
     disabled={disabled}
-    checked={input.checked}
-    onCheck={(e) => {
-      input.onChange(e)
+    autoOk={autoOk}
+    openToYearSelection={openToYearSelection}
+    onChange={(e, value, b) => {
+      input.onChange(value)
     }}
   />
 )

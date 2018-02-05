@@ -8,6 +8,8 @@ import Toggle from 'atom/Toggle/adapt'
 import SelectField from 'atom/SelectField/adapt'
 import Slider from 'adapt/Slider'
 import Checkbox from 'atom/Checkbox/adapt'
+import DatePicker from 'atom/DatePicker/adapt'
+import TimePicker from 'atom/TimePicker/adapt'
 
 const dataSet = {
   SelectField: [
@@ -20,6 +22,26 @@ const dataSet = {
 export default () => (
   <StyledSection>
     <h2>third party</h2>
+
+    <h3>TimePicker</h3>
+    <Field
+      name='TimePicker'
+      hintText='TimePicker'
+      disabled={false}
+      autoOk
+      component={TimePicker}
+    />
+
+    <h3>DatePicker</h3>
+    <Field
+      name='DatePicker'
+      hintText='DatePicker'
+      disabled={false}
+      autoOk
+      openToYearSelection
+      component={DatePicker}
+    />
+
     <h3>SelectField</h3>
     <Field
       name='SelectField'

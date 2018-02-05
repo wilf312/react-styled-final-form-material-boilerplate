@@ -2,10 +2,6 @@ import React from 'react'
 import { Form } from 'react-final-form'
 import Styled from 'styled-components'
 
-// import TimePicker from 'atom/TimePicker'
-import TimePicker from 'material-ui/TimePicker'
-import DatePicker from 'material-ui/DatePicker'
-
 import DefaultInput from 'organism/DefaultInput'
 import ThirdPartyInput from 'organism/ThirdPartyInput'
 
@@ -19,6 +15,8 @@ class TopPage extends React.Component {
         onSubmit={() => {}}
         initialValues={Object.assign({}, {
           Slider: 13,
+          DatePicker: new Date(),
+          TimePicker: new Date(),
           TextField: '',
           SelectField: '',
           Checkbox: ['UI design'],
@@ -37,19 +35,8 @@ class TopPage extends React.Component {
         validate={required}
         render={({ values }) => (
           <Wrap>
-            <TimePicker
-              disabled={false}
-              autoOk
-              hintText='Disabled TimePicker'
-            />
-
-            <DatePicker
-              hintText='Landscape Dialog'
-              disabled={false}
-              openToYearSelection
-            />
-            {/*<ThirdPartyInput />*/}
-            {/*<DefaultInput />*/}
+            <ThirdPartyInput />
+            <DefaultInput />
 
             <StyledPre>{JSON.stringify(values, 0, 2)}</StyledPre>
 
