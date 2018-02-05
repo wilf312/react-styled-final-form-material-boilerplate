@@ -1,7 +1,7 @@
 import React from 'react'
 import SelectField from 'atom/SelectField'
 
-export default ({input, meta, initialValue, dataList}) => (
+export default ({input, meta, dataList}) => (
   <SelectField
     label={'IceCream'}
     disabled={false}
