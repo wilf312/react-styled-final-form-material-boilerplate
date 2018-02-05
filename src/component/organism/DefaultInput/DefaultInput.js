@@ -21,8 +21,6 @@ export default () => (
     <label><Field name='LuckyNumber' component='input' type='radio' value='2' />2</label>
     <label><Field name='LuckyNumber' component='input' type='radio' value='3' />3</label>
 
-
-
     <h3>PotateChips</h3>
     <label><Field name='PotateChips' component='input' type='checkbox' value='salt' />salt</label>
     <label><Field name='PotateChips' component='input' type='checkbox' value='consomme' />consomme</label>
