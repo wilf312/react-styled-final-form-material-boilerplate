@@ -35,11 +35,15 @@ class TopPage extends React.Component {
         validate={required}
         render={({ values }) => (
           <Wrap>
-            <ThirdPartyInput />
-            <DefaultInput />
-
-            <StyledPre>{JSON.stringify(values, 0, 2)}</StyledPre>
-
+            <Item>
+              <ThirdPartyInput />
+            </Item>
+            <Item>
+              <DefaultInput />
+            </Item>
+            <Item>
+              <StyledPre>{JSON.stringify(values, 0, 2)}</StyledPre>
+            </Item>
           </Wrap>
         )}
       />
@@ -52,6 +56,15 @@ export default TopPage
 const Wrap = Styled.div`
   box-sizing: border-box;
   padding: 20px;
+  display: flex;
+  flex-direction row;
+  justify-content: space-between;
+`
+
+const Item = Styled.div`
+  display: flex;
+  margin: 20px;
+  width: 33%;
 `
 
 const StyledPre = Styled.pre`
