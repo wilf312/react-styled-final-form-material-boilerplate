@@ -1,8 +1,8 @@
 const conf = require('./webpack.config')
 const webpack = require('webpack')
 
-let mergedConf = Object.assign({}, conf)
-
-mergedConf.plugins.push(new webpack.optimize.UglifyJsPlugin())
+let mergedConf = Object.assign({}, conf, {
+  mode: 'production'
+})
 
 module.exports = mergedConf
