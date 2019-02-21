@@ -1,8 +1,8 @@
 import React from 'react'
-import SelectFieldUI from 'material-ui/SelectField'
-import MenuItemUI from 'material-ui/MenuItem'
+import SelectUI from 'material-ui/Select'
+import { MenuItemUI } from 'material-ui/Menu'
 
-class SelectField extends React.Component {
+class Select extends React.Component {
   render () {
     const {
       dataList,
@@ -12,7 +12,7 @@ class SelectField extends React.Component {
       errorText,
       onChange
     } = this.props
-    return <SelectFieldUI
+    return <SelectUI
       floatingLabelText={label}
       disabled={disabled}
       errorText={errorText}
@@ -20,10 +20,10 @@ class SelectField extends React.Component {
       onChange={onChange}
     >
       {dataList.map(({value, label}) => {
-        return <MenuItemUI value={value} key={value} primaryText={label} />
+        return <MenuItemUI value={value} key={value}>{label}</MenuItemUI>
       })}
-    </SelectFieldUI>
+    </SelectUI>
   }
 }
 
-export default SelectField
+export default Select

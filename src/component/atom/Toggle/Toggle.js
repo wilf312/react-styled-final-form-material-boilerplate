@@ -1,18 +1,17 @@
 import React from 'react'
-import ToggleUI from 'material-ui/Toggle'
+import SwitchUI from 'material-ui/Switch'
 
-class Toggle extends React.Component {
+class Switch extends React.Component {
   render () {
     const {
       input: { onChange, value },
       label
     } = this.props
-    return <ToggleUI
-      label={label}
-      toggled={!!value}
-      onToggle={(event, isInputChecked) => onChange(isInputChecked)}
+    return <SwitchUI
+      checked={!!value}
+      onChange={(event, isInputChecked) => onChange(isInputChecked)}
     />
   }
 }
 
-export default Toggle
+export default Switch
